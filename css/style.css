@@ -1,0 +1,405 @@
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap');
+
+html{
+    height: 100vh;
+}
+
+html, body{
+    background: #253141;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-image: linear-gradient(to bottom,
+    rgba(37, 49, 65, .6) 0%,
+    #253141 80%,
+    #253141 100%), 
+    url("https://pbs.twimg.com/media/DWQOGF0UQAA4op9.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title{
+    font-size: 1.8em;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+/* header */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px;
+}
+
+header .leftMenu{
+    display: flex;
+}
+
+header .leftMenu .navMenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+header .leftMenu .navMenu a{
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    padding: 0px 15px;
+    text-transform: uppercase;
+    transition: all .2s ease-in-out;
+}
+
+header .leftMenu .navMenu a:hover{
+    color: rgba(255, 255, 255, 1);
+}
+
+header .leftMenu .navMenu a .fa{
+    margin-left: 10px;
+}
+
+#logo{
+    font-size: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+header .rightMenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .rightMenu .language{
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    padding: 0px 60px 0px 0px;
+    text-transform: uppercase;
+    font-weight: 300;
+    transition: all .2s ease-in-out;
+}
+
+header .rightMenu .language:hover{
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+header .rightMenu .language .fa{
+    margin-left: 10px;
+}
+
+.signIn{
+    background: green;
+    /* #0375d5 */
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: .8em;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Featured Section */
+#video1{
+    background: url("https://www.pitcherlist.com/wp-content/uploads/Kershaw-7-27-19.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#video2{
+    background: url("https://www.bostonherald.com/wp-content/uploads/migration/2017/09/24/092417patsgallery07.jpg?w=535");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#video4{
+    background: url("https://image-cdn.essentiallysports.com/wp-content/uploads/20200401014124/2-86.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#video5{
+    background: url("https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/methode/2020/01/15/16be7b52-3776-11ea-9933-e21be988cd59_image_hires_173422.JPG?itok=jTX4hsUd&v=1579080867");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#feature{
+    padding: 50px 0px 0px;
+}
+
+#feature .videosContainer{
+    display: grid;
+    grid-template-columns: 1fr 2fr 620px 2fr 1fr;
+    grid-gap: 10px; /* add space between videos */
+}
+
+#feature .videosContainer .video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#feature .videosContainer .video .videoImage{
+    width: 100%;
+    height: 300px;
+    /* background: url("https://gamepedia.cursecdn.com/lolesports_gamepedia_en/thumb/7/74/New_To_League_Pentakill.png/711px-New_To_League_Pentakill.png?version=82737545ed20fb1781fb1a3f8a4d21b3");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+    cursor: pointer;
+}
+
+#feature .videosContainer .center{ /* Main Video */
+    width: 100%;
+    height: 349px;
+    background: red;
+}
+
+#feature .videosContainer .video.center .videoImage{ /* Main Video Image */
+    width: 100%;
+    height: 349px;
+    background: url("https://thumbs.gfycat.com/InfantileGlossyAnhinga-size_restricted.gif");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.05);
+    border: 2px solid #00b4f0;
+}
+
+/* Left Icon Stying */
+#feature .videosContainer .video:nth-child(1) .videoImage{ 
+    position: relative;
+}
+
+#feature .videosContainer .video:nth-child(1) .videoImage .arrow{ 
+    position: absolute;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: all .2s ease-in-out;
+}
+
+#feature .videosContainer .video:nth-child(1) .videoImage .arrow:hover{ 
+    background: rgba(0, 0, 0, .8);
+}
+
+#feature .videosContainer .video:nth-child(1) .videoImage .arrow .fa{ 
+    color: #00b4f0;
+    font-size: 4em;
+}
+
+/* Right Icon Stying */
+#feature .videosContainer .video:nth-child(5) .videoImage{ 
+    position: relative;
+}
+
+#feature .videosContainer .video:nth-child(5) .videoImage .arrow{ 
+    position: absolute;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    right: 0;
+    transition: all .2s ease-in-out;
+}
+
+#feature .videosContainer .video:nth-child(5) .videoImage .arrow:hover{ 
+    background: rgba(0, 0, 0, .8);
+}
+
+#feature .videosContainer .video:nth-child(5) .videoImage .arrow .fa{ 
+    color: #00b4f0;
+    font-size: 4em;
+}
+
+/*Cirles */
+#feature .dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#feature .dots .circlesContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#feature .dots .circlesContainer .circle{
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#feature .dots .circlesContainer .circle .background-color{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #fff;
+    transition: all .2s ease-in-out
+}
+
+#feature .dots .circlesContainer .circle:hover .background-color{
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #00b4f0;
+    cursor: pointer;
+}
+
+#feature .dots .circlesContainer .circle.active .background-color{
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #00b4f0;
+}
+
+
+/* Top Games Section */
+/* Game Backgrounds */
+#game1{
+    background: url("https://www.wamc.org/sites/wamc/files/201405/nba-logo.jpg");
+    background-position: 50% 10%;
+    background-repeat: no-repeat;
+    background-size: 88%;
+}
+
+#game2{
+    background: url("data:image/png;base64,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");
+    background-position: 50% 10%;
+    background-repeat: no-repeat;
+    background-size: top;
+}
+
+#game3{
+    background: url("https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/052014/mlb.png?itok=wlvCELtf");
+    background-position: 50% 15%;
+    background-repeat: no-repeat;
+    background-size: 97%;
+}
+
+#game4{
+    background: url("https://ih0.redbubble.net/image.501027621.4464/flat,550x550,075,f.u2.jpg");
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: 91%;
+}
+
+#game5{
+    background: url("https://fontmeme.com/images/Wimbledon-logo.png");
+    background-position: 50% 10%;
+    background-repeat: no-repeat;
+    background-size: 95%;
+}
+
+#game6{
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSv-jCeKWxyh0rhZgVZ5oBjselIUTbXxpArFFWHqh9Tazh0Aoff");
+    background-position: 50% 10%;
+    background-repeat: no-repeat;
+    background-size: 98%;
+}
+
+.gamesContainer{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+}
+
+.gamesContainer .game{
+    /* background: url("https://gamepreorders.com/wp-content/uploads/2016/03/overwatch-cover.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    height: 265px;
+    border-radius: 5px;
+    position: relative;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.game .info{
+    background: #253041;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    transition: all .2s ease-in-out;
+}
+
+.gamesContainer .game:hover .info{
+    background: #313f55;
+}
+
+.game .title{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.game .views{
+    font-weight: 300;
+    color: #8c919d;
+    font-size: .9em;
+}
+
+.game .views .fa{
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
